@@ -70,7 +70,7 @@ void rr(process processes[], int size, int quantum_time)
     {
         for (int i = 0; i < size; i++)
         {///don't need to do anything is something isn't in the queue yet or already completed
-            if (processes[i].arrival_time > total_time) { continue; }
+            if (processes[i].arrival_time > total_time) { cout << "Idle at " << total_time << "ms\n"; total_time++; }
             if (processes[i].is_complete) { continue; }
 
             if (processes[i].start_time == -1)
